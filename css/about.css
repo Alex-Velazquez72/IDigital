@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Variables de color */
+:root {
+    --primary-color: #001f54;
+    --secondary-color: #ffffff;
+    --hover-color: #e74c3c;
+    --separator-color: #001f54;
+    --background-color: #f8f9fa;
+}
+
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Navbar styles */
+.navbar {
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 20%;
+    width: 20%;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #001f54;
+}
+
+.nav-link {
+    color: #001f54;
+    font-weight: 500;
+    margin: 0 15px;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+
+.btn-primary {
+    background-color: #001f54;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #003080;
+}
+
+.btn-outline-primary {
+    color: #001f54;
+    border: 2px solid #001f54;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #001f54;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .btn-primary,
+    .btn-outline-primary {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* fin header */
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Ocupa toda la altura de la ventana */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta el video al contenedor */
+    z-index: -1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    /* Empieza desde el borde superior */
+    left: 0;
+    /* Empieza desde el borde izquierdo */
+    width: 100%;
+    /* Cubre todo el ancho */
+    height: 100%;
+    /* Cubre toda la altura */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro semitransparente */
+    color: white;
+    display: flex;
+    /* Flexbox para centrar el texto */
+    flex-direction: column;
+    /* Asegura que el contenido esté en columnas */
+    justify-content: center;
+    /* Centra verticalmente el texto */
+    align-items: center;
+    /* Centra horizontalmente el texto */
+    text-align: center;
+    padding: 20px;
+    /* Espaciado interno */
+    z-index: 1;
+}
+
+.text-overlay h1 {
+    margin: 0 0 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.text-overlay p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    /* Ajusta el tamaño del texto */
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+    max-width: 800px;
+    /* Limita el ancho del texto */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 50px 0 20px;
+    margin-top: 0;
+}
+
+.footer h5 {
+    font-size: 1.25rem;
+    color: #f1c40f;
+    margin-bottom: 15px;
+}
+
+.footer p,
+.footer ul {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #f1c40f;
+}
+
+.copyright {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #003080;
+    color: var(--secondary-color);
+}
+
+/* Imágenes */
+.image-grid img {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .image-grid {
+        margin-top: 20px;
+    }
+}
